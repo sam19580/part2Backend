@@ -22,7 +22,9 @@ let stockPrices = {
 
 setInterval(() => {
     for (let stock in stockPrices) {
-        stockPrices[stock] = (stockPrices[stock] + (Math.random() - 0.5) * 10).toFixed(2);
+        // Ensure stockPrices[stock] is treated as a number
+        stockPrices[stock] = Number(stockPrices[stock]) + (Math.random() - 0.5) * 10;
+        stockPrices[stock] = stockPrices[stock].toFixed(2);
     }
     io.emit('stockUpdate', stockPrices);
 }, 1000);
