@@ -33,7 +33,7 @@ This is the backend part of the Stock Broker Client Web Dashboard, built with No
 3. Start the Node.js server.
 
     ```bash
-    node index.js
+    npm run start
     ```
 
 ### Files
